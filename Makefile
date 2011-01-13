@@ -1,7 +1,7 @@
 CC=6g
 LD=6l
 
-SOURCES=1.go hello.go
+SOURCES=1.go 2.go
 OBJECTS=$(SOURCES:.go=.6)
 INCLUDE=-I/opt/local/lib/gopkg 
 LIBRARY=-L/opt/local/lib/gopkg 
