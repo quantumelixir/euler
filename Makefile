@@ -17,4 +17,4 @@ LIBRARY=-L/opt/local/lib/gopkg
 all: $(SOURCES:.go=)
 
 clean:
-	rm -rf *.6 *.out $(SOURCES:.go=)
+	rm -rf *.6
