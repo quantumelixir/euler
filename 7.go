@@ -1,33 +1,20 @@
 package main
 
-import "fmt"
+import (
+    "fmt"
+    "utils"
+)
 
 func main() {
 
-    var prime int
+    var i int
     nth := 10001
 
-    switch nth {
-        case 1: prime = 2
-        case 2: prime = 3
+    for count := 0; count != nth; i++ {
+        if utils.IsPrime(i) {
+            count++
+        }
     }
 
-    sqrt := 1
-    I: for p, i := 2, 5; p < nth; i+=2 {
-        for sqrt*sqrt < i {
-            sqrt++
-        }
-        if i % 3 == 0 {
-            continue I
-        }
-        for j := 5; j <= sqrt; j+=6 {
-            if i % j == 0 || i % (j + 2) == 0 {
-                continue I
-            }
-        }
-        prime = i
-        p++
-    }
-
-    fmt.Printf("%d\n", prime)
+    fmt.Println(i - 1)
 }

@@ -9,5 +9,5 @@ func main() {
         sum += i*i + i*i - (i - 1) + i*i - 2*(i - 1) + i*i - 3*(i - 1)
     }
 
-    fmt.Printf("%d\n", sum)
+    fmt.Println(sum)
 }

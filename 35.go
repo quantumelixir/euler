@@ -1,23 +1,9 @@
 package main
 
-import "fmt"
-
-func rotate(n int) (int){
-
-    sign := 1
-    if n < 0 {
-        sign = -1
-        n = -n
-    }
-
-    r := n % 10
-    p := 1
-    for p < n {
-        p *= 10
-    }
-
-    return sign*(r*p + n)/10
-}
+import (
+    "fmt"
+    "utils"
+)
 
 func isCircularPrime(n int, list []bool) (bool) {
 
@@ -26,7 +12,7 @@ func isCircularPrime(n int, list []bool) (bool) {
     }
 
     orig := n
-    for n = rotate(n); n != orig; n = rotate(n) {
+    for n = utils.RotateInt(n); n != orig; n = utils.RotateInt(n) {
         if list[n] {
             return false
         }
@@ -56,5 +42,5 @@ func main() {
         }
     }
 
-    fmt.Printf("%d\n", count)
+    fmt.Println(count)
 }

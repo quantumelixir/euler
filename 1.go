@@ -11,5 +11,5 @@ func main() {
     for i := 0; i < 1000; i+=3  { sum += i; }
     for i := 0; i < 1000; i+=15 { sum -= i; }
 
-    fmt.Printf("%d\n", sum);
+    fmt.Println(sum);
 }
