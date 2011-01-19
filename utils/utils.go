@@ -65,3 +65,19 @@ func ReverseInt(n int) (int) {
     }
     return res
 }
+
+//
+// Return a boolean slice with false in positions whose indices are primes,
+// upto (but not including) n.
+// 
+func Sieve(n int) (sieve []bool) {
+    sieve = make([]bool, n)
+    sieve[0], sieve[1] = true, true
+    for i := 2; i < n; i++ {
+        for j := i*2; !sieve[i] && j < n; j += i {
+            sieve[j] = true
+        }
+    }
+    return sieve
+}
+
