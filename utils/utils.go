@@ -112,3 +112,20 @@ func Primes(n int) (primes []int) {
     }
     return primes
 }
+
+func ArePermutations(a, b int) (bool) {
+
+    list := make([]int, 10)
+
+    for a != 0 {
+        list[a % 10]++
+        a /= 10
+    }
+    for b != 0 {
+        list[b % 10]--
+        b /= 10
+    }
+
+    return AbsSum(list) == 0
+}
+
