@@ -6,12 +6,6 @@ import (
     "utils"
 )
 
-func pow(n, k int) int {
-    c := 1
-    for i := 1; i <= k; i++ { c *= n }
-    return c
-}
-
 type Tuple [2]int
 type TupleArray []Tuple
 
@@ -38,8 +32,8 @@ func main() {
     }
 
     for _, i := range primes {
-        for k := 2; pow(i, k) <= upto && pow(i, k) > 0; k++ {
-            for j := pow(i, k); j <= upto; j += pow(i, k) {
+        for k := 2; utils.Pow(i, k) <= upto && utils.Pow(i, k) > 0; k++ {
+            for j := utils.Pow(i, k); j <= upto; j += utils.Pow(i, k) {
                 rad[j][1] /= i
             }
         }

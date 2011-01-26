@@ -129,3 +129,9 @@ func ArePermutations(a, b int) (bool) {
     return AbsSum(list) == 0
 }
 
+func Pow(n, k int) int {
+    c := 1
+    for i := 1; i <= k; i++ { c *= n }
+    return c
+}
+
