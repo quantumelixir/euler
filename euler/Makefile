@@ -6,6 +6,8 @@ GOFILES=\
 		2.go\
 		3.go\
 		4.go\
+		5.go\
+		6.go\
 		7.go\
 		10.go\
 		11.go\
@@ -32,6 +34,7 @@ GOFILES=\
 		77.go\
 		81.go\
 		82.go\
+		85.go\
 		112.go\
 		124.go\
 		231.go\

@@ -135,3 +135,19 @@ func Pow(n, k int) int {
     return c
 }
 
+func GCD(a, b int) int {
+    if a < 0  { return GCD(-a, b) }
+    if b < 0  { return GCD(a, -b) }
+    if a < b  { return GCD(b, a) }
+    if b == 0 { return a }
+    return GCD(b, a%b)
+}
+
+func NCR(n, r int) int {
+    if n < r { return 0 }
+    c := 1
+    for i := 1; i <= r; i++ {
+        c = c*(n - i + 1)/i
+    }
+    return c
+}

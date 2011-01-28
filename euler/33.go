@@ -1,15 +1,11 @@
 package euler
 
-func gcd(a, b int) int {
-    if a < 0  { return gcd(-a, b) }
-    if b < 0  { return gcd(a, -b) }
-    if a < b  { return gcd(b, a) }
-    if b == 0 { return a }
-    return gcd(b, a%b)
-}
+import (
+    "utils"
+)
 
 func areEqual(a, b int, x, y int) bool {
-    c, z := gcd(a, b), gcd(x, y)
+    c, z := utils.GCD(a, b), utils.GCD(x, y)
     if c == 0 || z == 0 { return c == z }
     return a/c == x/z && b/c == y/z
 }
@@ -28,5 +24,5 @@ func E33() int {
             d *= l
         }
     }
-    return d/gcd(n, d)
+    return d/utils.GCD(n, d)
 }
