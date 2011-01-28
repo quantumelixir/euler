@@ -1,10 +1,6 @@
-package main
+package euler
 
-import (
-    "fmt"
-)
-
-func main() {
+func E14() uint64 {
     const upto = 1000000
     collatz := make([]uint64, upto + 1)
 
@@ -29,5 +25,5 @@ func main() {
         }
     }
 
-    fmt.Println(ind)
+    return ind
 }

@@ -1,7 +1,6 @@
-package main
+package euler
 
 import (
-    "fmt"
     "sort"
     "utils"
 )
@@ -22,7 +21,7 @@ func (t TupleArray) Swap(i, j int) {
     t[i], t[j] = t[j], t[i]
 }
 
-func main() {
+func E124() int {
     const upto = 100000
     primes := utils.Primes(upto)
 
@@ -40,5 +39,5 @@ func main() {
     }
 
     sort.Sort(rad)
-    fmt.Println(rad[10000][0])
+    return rad[10000][0]
 }

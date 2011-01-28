@@ -1,8 +1,4 @@
-package main
-
-import (
-    "fmt"
-)
+package euler
 
 func sumOfPowers(n int) int {
     r := 0
@@ -14,10 +10,10 @@ func sumOfPowers(n int) int {
     return r
 }
 
-func main() {
+func E30() int {
     sum := 0
     for i := 2; i < 1E6; i++ {
         if sumOfPowers(i) == i { sum += i }
     }
-    fmt.Println(sum)
+    return sum
 }

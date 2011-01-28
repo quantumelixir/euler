@@ -1,10 +1,6 @@
-package main
+package euler
 
-import (
-    "fmt"
-)
-
-func main() {
+func E15() uint64 {
     const n = 21
     ways := make([][]uint64, n)
     for i := 0; i < n; i++ {
@@ -18,5 +14,5 @@ func main() {
         }
     }
 
-    fmt.Println(ways[n-1][n-1])
+    return ways[n-1][n-1]
 }

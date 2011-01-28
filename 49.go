@@ -1,11 +1,11 @@
-package main
+package euler
 
 import (
     "fmt"
     "utils"
 )
 
-func main() {
+func E49() string {
 
     primes := utils.Primes(10000)
     var a, b, c int
@@ -21,5 +21,5 @@ func main() {
         }
     }
 
-    fmt.Printf("%d%d%d\n", a, b, c)
+    return fmt.Sprintf("%d%d%d", a, b, c)
 }

@@ -1,11 +1,10 @@
-package main
+package euler
 
 import (
-    "fmt"
     "utils"
 )
 
-func main() {
+func E10() uint64 {
     var sum uint64
     sieve := utils.Sieve(2000000)
     for i, k := range sieve {
@@ -13,5 +12,5 @@ func main() {
             sum += uint64(i)
         }
     }
-    fmt.Println(sum)
+    return sum
 }

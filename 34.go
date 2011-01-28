@@ -1,6 +1,4 @@
-package main
-
-import "fmt"
+package euler
 
 func factorial(n int) int {
     c := 1
@@ -18,10 +16,10 @@ func fsum(n int) int {
     return r
 }
 
-func main() {
+func E34() int {
 	sum := 0
 	for i := 3; i < 1E6; i++ {
 		if fsum(i) == i { sum += i }
 	}
-	fmt.Println(sum)
+	return sum
 }

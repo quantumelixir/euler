@@ -1,10 +1,6 @@
-package main
+package euler
 
-import (
-    "fmt"
-)
-
-func main() {
+func E21() int {
     const upto = 10000
 
     sumdivs := make([]int, upto + 1)
@@ -22,5 +18,5 @@ func main() {
         if b == i { sum += a + b }
     }
 
-    fmt.Println(sum)
+    return sum
 }

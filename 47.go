@@ -1,8 +1,4 @@
-package main
-
-import (
-    "fmt"
-)
+package euler
 
 func countDistinctFactors(limit int) []int {
     count := make([]int, limit)
@@ -17,18 +13,19 @@ func countDistinctFactors(limit int) []int {
     return count
 }
 
-func main() {
+func E47() int {
     const limit, k = 1E6, 4
     count := countDistinctFactors(limit)
 
-    for i := 0; i + k - 1 < limit ; i++ {
+    var i int
+    for i = 0; i + k - 1 < limit ; i++ {
         flag := true
         for j := 0; flag && j < k; j++ {
             flag = flag && count[i + j] == k
         }
         if flag {
-            fmt.Println(i)
             break
         }
     }
+    return i
 }

@@ -1,8 +1,4 @@
-package main
-
-import (
-    "fmt"
-)
+package euler
 
 func raiseMod(a, b, m uint64) (r uint64) {
     var i uint64
@@ -12,7 +8,7 @@ func raiseMod(a, b, m uint64) (r uint64) {
     return r
 }
 
-func main() {
+func E48() uint64 {
     var mod, res, i uint64
 
     mod = 10000000000
@@ -20,5 +16,5 @@ func main() {
         res = (res + raiseMod(i, i, mod)) % mod
     }
 
-    fmt.Println(res)
+    return res
 }

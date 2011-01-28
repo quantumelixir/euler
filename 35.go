@@ -1,7 +1,6 @@
-package main
+package euler
 
 import (
-    "fmt"
     "utils"
 )
 
@@ -21,7 +20,7 @@ func isCircularPrime(n int, list []bool) (bool) {
     return true
 }
 
-func main() {
+func E35() int {
 
     limit := 1000000
     list := make([]bool, limit)
@@ -42,5 +41,5 @@ func main() {
         }
     }
 
-    fmt.Println(count)
+    return count
 }

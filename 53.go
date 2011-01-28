@@ -1,8 +1,4 @@
-package main
-
-import (
-    "fmt"
-)
+package euler
 
 func exceeds(n, r int, l float64) bool {
     if n < r { return false }
@@ -12,7 +8,7 @@ func exceeds(n, r int, l float64) bool {
     return false
 }
 
-func main() {
+func E53() int {
     const upto = 100
 
     var sum int
@@ -33,5 +29,5 @@ func main() {
         prev, curr = curr, prev
     }
 
-    fmt.Println(sum)
+    return sum
 }

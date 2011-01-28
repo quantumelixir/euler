@@ -1,8 +1,4 @@
-package main
-
-import (
-    "fmt"
-)
+package euler
 
 func gcd(a, b int) int {
     if a < 0  { return gcd(-a, b) }
@@ -18,7 +14,7 @@ func areEqual(a, b int, x, y int) bool {
     return a/c == x/z && b/c == y/z
 }
 
-func main() {
+func E33() int {
     n, d := 1, 1
     for i := 10; i < 100; i++ {
         for j := i + 1; j < 100; j++ {
@@ -28,10 +24,9 @@ func main() {
             if i/10 == j%10 && areEqual(i, j, i%10, j/10) { k, l = i%10, j/10 }
             if i%10 == j/10 && areEqual(i, j, i/10, j%10) { k, l = i/10, j%10 }
             if i%10 == j%10 && areEqual(i, j, i/10, j/10) { k, l = i/10, j/10 }
-            if k != 1 || l != 1 { fmt.Println(i, j, k, l) }
             n *= k
             d *= l
         }
     }
-    fmt.Println(d/gcd(n, d))
+    return d/gcd(n, d)
 }

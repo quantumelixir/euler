@@ -1,8 +1,4 @@
-package main
-
-import (
-    "fmt"
-)
+package euler
 
 var primes []uint64
 
@@ -41,9 +37,9 @@ func clever(n uint64) (sum uint64) {
     return sum
 }
 
-func main() {
+func E231() uint64 {
     const n, r = 2E7, 15E6
     primes = findprimes(n)
     sum := clever(n) - clever(n-r) - clever(r)
-    fmt.Println(sum)
+    return sum
 }

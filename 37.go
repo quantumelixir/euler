@@ -1,7 +1,6 @@
-package main
+package euler
 
 import (
-    "fmt"
     "utils"
 )
 
@@ -30,7 +29,7 @@ func isTruncatablePrime(n int) (bool) {
     return isRightTruncatablePrime(n) && isLeftTruncatablePrime(n)
 }
 
-func main() {
+func E37() int {
 
     sum := 0
     for count, i := 0, 10; count < 11; i++ {
@@ -40,5 +39,5 @@ func main() {
         }
     }
 
-    fmt.Println(sum)
+    return sum
 }

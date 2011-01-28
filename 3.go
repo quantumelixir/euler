@@ -1,12 +1,12 @@
-package main
+package euler
 
 import (
-    "fmt"
     "math"
     "utils"
 )
 
-func main() {
+func E3() uint64 {
+
     n, res := uint64(600851475143), uint64(0)
     nf := float64(n)
     primes := utils.Primes(int(math.Sqrt(nf)))
@@ -16,5 +16,5 @@ func main() {
             res = uint64(p)
         }
     }
-    fmt.Println(res)
+    return res
 }

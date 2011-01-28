@@ -1,7 +1,6 @@
-package main
+package euler
 
 import (
-    "fmt"
     "utils"
 )
 
@@ -26,7 +25,7 @@ func lmultiply(a BigInt, b BigInt) BigInt {
     return a
 }
 
-func main() {
+func E16() int {
     res := make([]int, 1, 1000)
     base := make([]int, 1)
     res[0] = 2
@@ -35,5 +34,5 @@ func main() {
     for i := 2; i <= 1000; i++ {
         res = lmultiply(res, base)
     }
-    fmt.Println(utils.Sum(res))
+    return utils.Sum(res)
 }

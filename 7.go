@@ -1,13 +1,11 @@
-package main
+package euler
 
 import (
-    "fmt"
     "utils"
 )
 
-func main() {
+func E7() (i int) {
 
-    var i int
     nth := 10001
 
     for count := 0; count != nth; i++ {
@@ -16,5 +14,5 @@ func main() {
         }
     }
 
-    fmt.Println(i - 1)
+    return i - 1
 }

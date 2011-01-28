@@ -1,7 +1,6 @@
-package main
+package euler
 
 import (
-    "fmt"
     "utils"
 )
 
@@ -25,10 +24,10 @@ func d(n int) int {
     return digit
 }
 
-func main() {
+func E40() int {
     prod := 1
     for i := 0; i <= 6; i++ {
         prod *= d(utils.Pow(10, i))
     }
-    fmt.Println(prod)
+    return prod
 }

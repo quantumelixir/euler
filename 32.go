@@ -1,7 +1,6 @@
-package main
+package euler
 
 import (
-    "fmt"
     "utils"
 )
 
@@ -21,7 +20,7 @@ func isPandigital(l, m, n int) bool {
     return true
 }
 
-func main() {
+func E32() (sum int) {
 
     products := make(map[int]bool)
 
@@ -37,10 +36,9 @@ func main() {
         }
     }
 
-    sum := 0
     for k, _ := range products {
         sum += k
     }
 
-    fmt.Println(sum)
+    return sum
 }

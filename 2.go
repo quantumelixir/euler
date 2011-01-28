@@ -1,8 +1,6 @@
-package main
+package euler
 
-import "fmt"
-
-func main() {
+func E2() int {
 
     c, sum := 0, 0
 
@@ -15,5 +13,5 @@ func main() {
         }
     }
 
-    fmt.Println(sum)
+    return sum
 }

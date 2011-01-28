@@ -1,1 +1,3 @@
 Learning Go with Project Euler
+
+$ gomake install # installs package euler

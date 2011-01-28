@@ -1,7 +1,6 @@
-package main
+package euler
 
 import (
-    "fmt"
     "utils"
 )
 
@@ -36,6 +35,6 @@ func mostConsecutivePrimeBelow(n int) (int) {
     return prime
 }
 
-func main() {
-    fmt.Println(mostConsecutivePrimeBelow(1000000))
+func E50() int {
+    return mostConsecutivePrimeBelow(1000000)
 }

@@ -1,7 +1,6 @@
-package main
+package euler
 
 import (
-    "fmt"
     "utils"
 )
 
@@ -9,7 +8,7 @@ func isPalindrome(n int) (bool) {
     return n == utils.ReverseInt(n)
 }
 
-func main() {
+func E4() int {
 
     var res int
     for i := 100; i < 1000; i++ {
@@ -20,5 +19,5 @@ func main() {
         }
     }
 
-    fmt.Println(res)
+    return res
 }

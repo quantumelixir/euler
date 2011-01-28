@@ -1,6 +1,4 @@
-package main
-
-import "fmt"
+package euler
 
 func isIncreasing(n uint64) bool {
 	var max uint64
@@ -36,13 +34,13 @@ func isBouncy(n uint64) bool {
     return !(isIncreasing(n) || isDecreasing(n))
 }
 
-func main() {
+func E112() uint64 {
 	var bnc, i uint64;
 	for i = 1; ; i++ {
 		if isBouncy(i) { bnc++ }
 		if bnc*100 == 99*i {
-			fmt.Println(i)
 			break
 		}
 	}
+	return i
 }

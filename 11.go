@@ -1,13 +1,12 @@
-package main
+package euler
 
 import (
-    "fmt"
     "regexp"
     "strconv"
     "utils"
 )
 
-func main() {
+func E11() int {
 
     input := `08 02 22 97 38 15 00 40 00 75 04 05 07 78 52 12 50 77 91 08
               49 49 99 40 17 81 18 57 60 87 17 40 98 43 69 48 04 56 62 00
@@ -69,5 +68,5 @@ func main() {
         }
     }
 
-    fmt.Println(res)
+    return res
 }
