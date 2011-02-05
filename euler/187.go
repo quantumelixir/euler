@@ -1,11 +1,10 @@
-package main
+package euler
 
 import (
-    "fmt"
     "utils"
 )
 
-func main() {
+func E187() int {
     const upto = 1E8
     primes := utils.Primes(upto/2 + 1)
 
@@ -17,5 +16,5 @@ func main() {
         }
     }
 
-    fmt.Println(count + len(primes)) // account for semiprimes of the form 2*p
+    return count + len(primes) // account for semiprimes of the form 2*p
 }

@@ -37,6 +37,11 @@ GOFILES=\
 		85.go\
 		112.go\
 		124.go\
+		173.go\
+		174.go\
+		187.go\
+		188.go\
+		206.go\
 		231.go\
 
 include $(GOROOT)/src/Make.pkg

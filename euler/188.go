@@ -1,8 +1,4 @@
-package main
-
-import (
-    "fmt"
-)
+package euler
 
 func pow(a, b, mod uint64) uint64 {
     r := uint64(1)
@@ -20,7 +16,7 @@ func hyperexp(a, b, mod uint64) uint64 {
     return pow(a, hyperexp(a, b - 1, mod), mod)
 }
 
-func main() {
+func E188() uint64 {
     var a, b, mod uint64 = 1777, 1855, 1E8
-    fmt.Println(hyperexp(a, b, mod))
+    return hyperexp(a, b, mod)
 }

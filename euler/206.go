@@ -1,10 +1,6 @@
-package main
+package euler
 
-import (
-    "fmt"
-)
-
-func main() {
+func E206() uint64 {
     var i, res uint64
     I: for i = 1E7; ; i+=10 {
         for _, j := range [2]uint64{3, 7} {
@@ -28,5 +24,5 @@ func main() {
             break I
         }
     }
-    fmt.Println(res)
+    return res
 }
