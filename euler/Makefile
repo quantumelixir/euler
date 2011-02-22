@@ -22,6 +22,7 @@ GOFILES=\
 		33.go\
 		34.go\
 		35.go\
+		36.go\
 		37.go\
 		40.go\
 		47.go\
