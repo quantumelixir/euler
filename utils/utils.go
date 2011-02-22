@@ -151,3 +151,21 @@ func NCR(n, r int) int {
     }
     return c
 }
+
+func DigitSum64(n uint64) uint64 {
+    sum := uint64(0)
+    for n != 0 {
+        sum += n%10
+        n /= 10
+    }
+    return sum
+}
+
+func DigitSum(n int) int {
+    sum := 0
+    for n != 0 {
+        sum += n%10
+        n /= 10
+    }
+    return sum
+}
