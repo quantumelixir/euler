@@ -29,6 +29,7 @@ func main() {
     fmt.Println("35:", euler.E35())
     fmt.Println("36:", euler.E36())
     fmt.Println("37:", euler.E37())
+    fmt.Println("38:", euler.E38())
     fmt.Println("40:", euler.E40())
     fmt.Println("47:", euler.E47())
     fmt.Println("48:", euler.E48())
