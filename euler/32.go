@@ -1,7 +1,7 @@
 package euler
 
 import (
-    "utils"
+    "euler/utils"
 )
 
 func isPandigital(l, m, n int) bool {

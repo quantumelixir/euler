@@ -1,7 +1,7 @@
 package euler
 
 import (
-    "utils"
+    "euler/utils"
 )
 
 func isCircularPrime(n int, list []bool) (bool) {

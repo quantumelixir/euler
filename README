@@ -1,16 +1,4 @@
 Learning Go with Project Euler
 
-$ gomake install # installs package euler
-$ cat - > main.go
-package main
-
-import (
-    "fmt"
-    "euler"
-)
-
-func main() {
-    fmt.Println(euler.E231())
-}
-<CTRL-D>
-$ 6g main.go && 6l main.6 && ./6.out
+$ go install euler # installs package euler
+$ euler # runs the binary if it's in your PATH

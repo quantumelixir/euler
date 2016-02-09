@@ -1,7 +1,7 @@
 package euler
 
 import (
-	"utils"
+	"euler/utils"
 )
 
 func E81() int {

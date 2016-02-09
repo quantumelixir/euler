@@ -2,7 +2,7 @@ package euler
 
 import (
     "math"
-    "utils"
+    "euler/utils"
 )
 
 func E3() uint64 {

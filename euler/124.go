@@ -2,7 +2,7 @@ package euler
 
 import (
     "sort"
-    "utils"
+    "euler/utils"
 )
 
 type Tuple [2]int

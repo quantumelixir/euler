@@ -2,7 +2,7 @@ package main
 
 import (
     "fmt"
-    "euler"
+    "euler/euler"
 )
 
 func main() {

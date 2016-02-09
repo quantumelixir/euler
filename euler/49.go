@@ -2,7 +2,7 @@ package euler
 
 import (
     "fmt"
-    "utils"
+    "euler/utils"
 )
 
 func E49() string {

@@ -1,7 +1,7 @@
 package euler
 
 import (
-    "utils"
+    "euler/utils"
 )
 
 func ways77(n int, denom []int, ind int, memo [][]int) int {

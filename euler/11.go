@@ -3,7 +3,7 @@ package euler
 import (
     "regexp"
     "strconv"
-    "utils"
+    "euler/utils"
 )
 
 func E11() int {
