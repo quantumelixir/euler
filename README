@@ -1,4 +1,7 @@
 Learning Go with Project Euler
 
-$ go install euler # installs package euler
-$ euler # runs the binary if it's in your PATH
+Download, Install and Run this package:
+
+$ go get github.com/quantumelixir/euler
+$ go install github.com/quantumelixir/euler
+$ euler

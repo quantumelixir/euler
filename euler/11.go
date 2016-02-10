@@ -1,14 +1,14 @@
 package euler
 
 import (
-    "regexp"
-    "strconv"
-    "euler/utils"
+	"github.com/quantumelixir/euler/utils"
+	"regexp"
+	"strconv"
 )
 
 func E11() int {
 
-    input := `08 02 22 97 38 15 00 40 00 75 04 05 07 78 52 12 50 77 91 08
+	input := `08 02 22 97 38 15 00 40 00 75 04 05 07 78 52 12 50 77 91 08
               49 49 99 40 17 81 18 57 60 87 17 40 98 43 69 48 04 56 62 00
               81 49 31 73 55 79 14 29 93 71 40 67 53 88 30 03 49 13 36 65
               52 70 95 23 04 60 11 42 69 24 68 56 01 32 56 71 37 02 36 91
@@ -29,44 +29,44 @@ func E11() int {
               20 73 35 29 78 31 90 01 74 31 49 71 48 86 81 16 23 57 05 54
               01 70 54 71 83 51 54 69 16 92 33 48 61 43 52 01 89 19 67 48`
 
-    numbers := regexp.MustCompile("[0-9]+")
-    s := numbers.FindAllString(input, -1)
-    n := make([]int, len(s))
-    for i := 0; i < len(s); i++ {
-        n[i], _ = strconv.Atoi(s[i])
-    }
+	numbers := regexp.MustCompile("[0-9]+")
+	s := numbers.FindAllString(input, -1)
+	n := make([]int, len(s))
+	for i := 0; i < len(s); i++ {
+		n[i], _ = strconv.Atoi(s[i])
+	}
 
-    res := 0
-    for i := 0; i < 20; i++ {
-        for j := 0; j < 20; j++ {
-            k := i*20 + j
-            var l, r, u, d, g, h int
-            if 3 <= j { // left
-                l = n[k-3]*n[k-2]*n[k-1]*n[k]
-            }
-            if j + 3 < 20 { // right
-                r = n[k]*n[k+1]*n[k+2]*n[k+3]
-            }
-            if 3 <= i { // up
-                u = n[k-60]*n[k-40]*n[k-20]*n[k]
-            }
-            if i + 3 < 20 { // down
-                d = n[k]*n[k+20]*n[k+40]*n[k+60]
-            }
-            if i + 3 < 20 && j + 3 < 20 { // diag
-                g = n[k]*n[k+21]*n[k+42]*n[k+63]
-            }
-            if i + 3 < 20 && 3 <= j { // diag2
-                h = n[k]*n[k+19]*n[k+38]*n[k+57]
-            }
-            res = utils.Max(res, l)
-            res = utils.Max(res, r)
-            res = utils.Max(res, u)
-            res = utils.Max(res, d)
-            res = utils.Max(res, g)
-            res = utils.Max(res, h)
-        }
-    }
+	res := 0
+	for i := 0; i < 20; i++ {
+		for j := 0; j < 20; j++ {
+			k := i*20 + j
+			var l, r, u, d, g, h int
+			if 3 <= j { // left
+				l = n[k-3] * n[k-2] * n[k-1] * n[k]
+			}
+			if j+3 < 20 { // right
+				r = n[k] * n[k+1] * n[k+2] * n[k+3]
+			}
+			if 3 <= i { // up
+				u = n[k-60] * n[k-40] * n[k-20] * n[k]
+			}
+			if i+3 < 20 { // down
+				d = n[k] * n[k+20] * n[k+40] * n[k+60]
+			}
+			if i+3 < 20 && j+3 < 20 { // diag
+				g = n[k] * n[k+21] * n[k+42] * n[k+63]
+			}
+			if i+3 < 20 && 3 <= j { // diag2
+				h = n[k] * n[k+19] * n[k+38] * n[k+57]
+			}
+			res = utils.Max(res, l)
+			res = utils.Max(res, r)
+			res = utils.Max(res, u)
+			res = utils.Max(res, d)
+			res = utils.Max(res, g)
+			res = utils.Max(res, h)
+		}
+	}
 
-    return res
+	return res
 }

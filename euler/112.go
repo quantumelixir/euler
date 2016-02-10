@@ -2,7 +2,7 @@ package euler
 
 func isIncreasing(n uint64) bool {
 	var max uint64
-    for {
+	for {
 		max = n % 10
 		n /= 10
 		if n == 0 {
@@ -11,13 +11,13 @@ func isIncreasing(n uint64) bool {
 		if n%10 > max {
 			return false
 		}
-    }
+	}
 	return true
 }
 
 func isDecreasing(n uint64) bool {
 	var min uint64
-    for {
+	for {
 		min = n % 10
 		n /= 10
 		if n == 0 {
@@ -26,18 +26,20 @@ func isDecreasing(n uint64) bool {
 		if n%10 < min {
 			return false
 		}
-    }
+	}
 	return true
 }
 
 func isBouncy(n uint64) bool {
-    return !(isIncreasing(n) || isDecreasing(n))
+	return !(isIncreasing(n) || isDecreasing(n))
 }
 
 func E112() uint64 {
-	var bnc, i uint64;
+	var bnc, i uint64
 	for i = 1; ; i++ {
-		if isBouncy(i) { bnc++ }
+		if isBouncy(i) {
+			bnc++
+		}
 		if bnc*100 == 99*i {
 			break
 		}
