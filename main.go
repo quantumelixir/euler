@@ -51,4 +51,5 @@ func main() {
 	fmt.Println("206:", euler.E206())
 	fmt.Println("231:", euler.E231())
 	fmt.Println("469:", euler.E469())
+	fmt.Println("527:", euler.E527())
 }
