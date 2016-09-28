@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/quantumelixir/euler/euler"
+	"github.com/quantumelixir/euler/solutions"
 )
 
 func main() {
